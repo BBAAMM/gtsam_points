@@ -29,6 +29,7 @@ if(BUILD_WITH_MARCH_NATIVE)
   set(CMAKE_CXX_FLAGS "-march=native ${CMAKE_CXX_FLAGS}")
 endif()
 
+find_package(ament_cmake_auto REQUIRED)
 find_package(Boost REQUIRED COMPONENTS graph filesystem)
 find_package(GTSAM REQUIRED)
 find_package(GTSAM_UNSTABLE REQUIRED)
@@ -409,3 +410,4 @@ set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE")
 set(CPACK_PACKAGE_VENDOR "k.koide")
 
 include(CPack)
+ament_auto_package()
